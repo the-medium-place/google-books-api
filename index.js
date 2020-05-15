@@ -25,7 +25,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks_db"
 });
 
 app.use(cors({
-    origin:["http://localhost:3000"]
+    origin:["https://pacific-earth-75465.herokuapp.com/"]
 }));
 
 app.get("/", (req, res) => {
