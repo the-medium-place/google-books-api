@@ -28,6 +28,10 @@ app.use(cors({
     origin:["http://localhost:3000"]
 }));
 
+app.get("/", (req, res) => {
+    res.send("API splash!")
+})
+
 app.get("/api/favbooks", (req,res) => {
     console.log('received request')
 
