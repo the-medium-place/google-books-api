@@ -69,16 +69,16 @@ app.post("/api/favbooks", ({ body }, res) => {
 
 
 app.delete("/api/favbooks/:id", ({ params }, res) => {
-
-    console.log("server side delete");
-    // db.FavBook.deleteOne({_id: body._id}, function(err) {
-    //     if(err) throw err;
-    //     console.log("successful deletion");
-    //     res.reload()
-    // })
     db.FavBook.findByIdAndDelete(params.id, function (err) {
         if(err) console.log(err);
         console.log("Successful deletion");
+      })
+      .then(dbFavBook => {
+          res.send(dbFavBook)
+        })
+      .catch(err=> {
+          console.log(err);
+          res.send(err);
       });
 })
 
