@@ -11,10 +11,10 @@ Visit the deployed app [HERE](https://pacific-earth-75465.herokuapp.com/)!
 * See your saved list by clicking 'Saved' at the top of the page
 * Delete books from your saved list by clicking the red 'Delete' button
 
-### Book Search Page - Search the Google Books API
+#### Book Search Page - Search the Google Books API
 ![screenshot 1](./screenshot1.png)
 
-### Saved books list page - View and delete saved books 
+#### Saved books list page - View and delete saved books 
 ![screenshot 1](./screenshot2.png)
  
 
