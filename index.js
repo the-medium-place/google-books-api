@@ -9,28 +9,25 @@ const PORT = process.env.PORT || 3001
 const db = require("./models");
 
 const app = express();
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
-
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
-// app.use(express.static("public"));
-
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks_db", {
     useNewUrlParser: true,
     useFindAndModify: false
 });
 
-// app.use(cors({
-//     origin:["http://localhost:3000"]
-// }));
-
+// LOCAL DEV LINK
 app.use(cors({
-    origin:["https://pacific-earth-75465.herokuapp.com"]
+    origin:["http://localhost:3000"]
 }));
+
+
+// DEPLOYED LINK
+// app.use(cors({
+//     origin:["https://pacific-earth-75465.herokuapp.com"]
+// }));
 
 app.get("/", (req, res) => {
     res.send("API splash!")
