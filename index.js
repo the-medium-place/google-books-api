@@ -21,17 +21,9 @@ mongoose.connect(process.env.REACT_APP_MONGODB_URI || "mongodb://localhost/googl
     useFindAndModify: false
 });
 
-// console.log(process.env.REACT_APP_MONGODB_URI)
-
 // // LOCAL DEV LINK
 // app.use(cors({
 //     origin:["http://localhost:3000"]
-// }));
-
-
-// DEPLOYED LINK
-// app.use(cors({
-//     origin:["https://pacific-earth-75465.herokuapp.com"]
 // }));
 
 // DEPLOYED LINK
