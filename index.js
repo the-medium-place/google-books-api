@@ -16,15 +16,17 @@ app.use(express.json());
 mongoose.connect(process.env.REACT_APP_MONGODB_URI || "mongodb://localhost/googlebooks_db",
  {
     useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
     useFindAndModify: false
 });
 
 // console.log(process.env.REACT_APP_MONGODB_URI)
 
 // LOCAL DEV LINK
-// app.use(cors({
-//     origin:["http://localhost:3000"]
-// }));
+app.use(cors({
+    origin:["http://localhost:3000"]
+}));
 
 
 // DEPLOYED LINK
@@ -33,9 +35,9 @@ mongoose.connect(process.env.REACT_APP_MONGODB_URI || "mongodb://localhost/googl
 // }));
 
 // DEPLOYED LINK
-app.use(cors({
-    origin:["https://awesome-google-books-react.herokuapp.com/"]
-}));
+// app.use(cors({
+//     origin:["https://awesome-google-books-react.herokuapp.com/"]
+// }));
 
 
 
