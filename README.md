@@ -1,4 +1,4 @@
-<a href="https://pacific-earth-75465.herokuapp.com/"><h1>Google Books Search</h1></a>
+<a href="https://awesome-google-books-react.herokuapp.com/"><h1>Google Books Search</h1></a>
 
 ## Description: 
 This application uses React JS and Mongoose, allowing a user to search the Google Books API, and save any results to a list that is displayed on the 'Saved' page. The user can also delete books from this list giving the app CR_D functionality. 
