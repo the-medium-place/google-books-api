@@ -23,10 +23,10 @@ mongoose.connect(process.env.REACT_APP_MONGODB_URI || "mongodb://localhost/googl
 
 // console.log(process.env.REACT_APP_MONGODB_URI)
 
-// LOCAL DEV LINK
-app.use(cors({
-    origin:["http://localhost:3000"]
-}));
+// // LOCAL DEV LINK
+// app.use(cors({
+//     origin:["http://localhost:3000"]
+// }));
 
 
 // DEPLOYED LINK
@@ -35,9 +35,9 @@ app.use(cors({
 // }));
 
 // DEPLOYED LINK
-// app.use(cors({
-//     origin:["https://awesome-google-books-react.herokuapp.com/"]
-// }));
+app.use(cors({
+    origin:["https://awesome-google-books-react.herokuapp.com/"]
+}));
 
 
 
