@@ -28,7 +28,8 @@ mongoose.connect(process.env.REACT_APP_MONGODB_URI || "mongodb://localhost/googl
 
 // DEPLOYED LINK
 app.use(cors({
-    origin:["https://awesome-google-books-react.herokuapp.com/"]
+    origin:["https://awesome-google-books-react.herokuapp.com"],
+    credentials: true,
 }));
 
 
